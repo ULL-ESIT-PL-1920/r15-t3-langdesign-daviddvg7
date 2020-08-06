@@ -19,14 +19,14 @@ Modifica la gramática corrigiendo los errores que veas, de manera que genere fr
 
 <statement> ::=
                <declaration> |
-              "if" <parenthesis> <block> ("else" "if" <block>)* ('else' <block>)? |
+              "if" <parenthesis> <block> ("else" "if" <parenthesis> <block>)* ('else' <block>)? |
               "while" <parenthesis> <block> |
               'function' <word> '(' <word> (',' <word>)* ')' <block> |
-              <expr> ";"
+              <asig> ";"
               
 <declaration> ::= 'var' WORD ('=' <expr>)?
 
-//<asign> ::= <expr> ('=' <expr>)*
+<asig> ::= <expr> ('=' <expr>)*
 
 <expr> = (<leftVal> '=')* <comp>
 
@@ -44,7 +44,7 @@ Modifica la gramática corrigiendo los errores que veas, de manera que genere fr
 
 <parenthesis> ::= '(' <expr> ')'
 
-<fact> ::= (WORD | VALUE | <array> | <parenthesis>) ('.' WORD | '[' <expr> ']')*
+<fact> ::= (WORD | VALUE | <array> | <parenthesis>) ('.' WORD | '[' <expr> ']' | <apply>)*
 ```
 
 ## Tokens
