@@ -38,11 +38,11 @@ Modifica la gramática corrigiendo los errores que veas, de manera que genere fr
 
 <sum> ::= <fact> (('*', '/') <fact>)*
 
-<apply> ::= '(' <expr> (',' <expr>)* ')'<apply> | '.'<word><apply> | empty | '[' <expr> ']' <apply>
+<apply> ::= '(' <statement> (',' <statement>)* ')'<apply> | '.'<word><apply> | empty | '[' <comp> ']' <apply>
 
-<array> ::= '[' ']' | '[' <expr> (',' <expr> )*] // Added by Casiano
+<array> ::= '[' ']' | '[' <comp> (',' <comp> )*] // Added by Casiano
 
-<parenthesis> ::= '(' <expr> ')'
+<parenthesis> ::= '(' <asig> ')'
 
 <fact> ::= (WORD | VALUE | <array> | <parenthesis>) <apply>
 ```
